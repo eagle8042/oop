@@ -11,15 +11,16 @@ class Student:
     def bmi(self):
         return self.weight / (self.height / 100.0) ** 2
 
-    def overweight():
-        return True if student.bmi() >= 35 else False
+    def overweight(self):
+        return True if self.bmi() >= 35 else False
 
-students = [
-    Student('bill', 169, 100),
-    Student('brian', 164, 56),
-    Student('eagle', 173, 20)
-]
+if __name__ == '__main__':
+    students = [
+        Student('bill', 169, 100),
+        Student('brian', 164, 56),
+        Student('eagle', 173, 20)
+    ]
 
-for student in students:
-    if student.overweight():
-    print(student.name)
+    for student in students:
+        if student.overweight():
+            print(student.name)
